@@ -9,6 +9,8 @@ const WheelPage = document.getElementById("WheelPage");
 const letgoBut = document.getElementById("letgoBut");
 const gtrdm = document.getElementById("gtrdm");
 const gtdg = document.getElementById("gtdg");
+const randomBut = document.getElementById("randomBut");
+const openMenu = document.getElementById("open-menu");
 
 
 //Set display default for page 
@@ -16,6 +18,7 @@ const gtdg = document.getElementById("gtdg");
 OptionPage.style.display = "none";
 RandomPage.style.display = "none";
 WheelPage.style.display = "none";
+openMenu.style.display = "none";
 
 
 // Using JQUERY to handle page load with a delay because page is not heavy enough.
@@ -84,30 +87,37 @@ function Randomizer(){
             var randomed = myObj[Math.floor(Math.random()*myObj.length)]; //radom one array out of Myobj
             
 
-            var move = `<div class="beerImg">
-                            <img src="${randomed.img}" alt="${randomed.title}" class="bimg">
-                        </div>
-                        <div class="beerDes">
-                            <h1 class="beerTitle">${randomed.title}</h1>
-                            <h3 class="desCont"><span class="desHead">Brand:</span> ${randomed.brand}</h3>
-                            <h3 class="desCont"><span class="desHead">Type:</span> ${randomed.type}</h3>
-                            <h3 class="desCont"><span class="desHead">Alcohol:</span> ${randomed.alc}%</h3>
-                            <h3 class="desCont"><span class="desHead">Flavor:</span> ${randomed.flv}</h3>
-                            <button class="nextBut" onclick="Randomizer()">Next</button>
-                        </div>`
-            var canvas = document.getElementById("ranCanvas");//prepare to manipulate the dom
-            canvas.innerHTML = "";//clean the element 
-            canvas.innerHTML += move;//manipulate
-            rdmLoad.restart
+            var bImg = `<img src="${randomed.img}" alt="${randomed.title}" class="bimg">`
+
+            var bDes = `<h1 class="beerTitle">${randomed.title}</h1>
+            <h3 class="desCont"><span class="desHead">Brand:</span> ${randomed.brand}</h3>
+            <h3 class="desCont"><span class="desHead">Type:</span> ${randomed.type}</h3>
+            <h3 class="desCont"><span class="desHead">Alcohol:</span> ${randomed.alc}%</h3>
+            <h3 class="desCont"><span class="desHead">Flavor:</span> ${randomed.flv}</h3>`
+
+            var imgCanvas = document.getElementById("imgCanvas");//prepare to manipulate the dom
+            var desCanvas = document.getElementById("desCanvas");//prepare to manipulate the dom
+            imgCanvas.innerHTML = "";//clean the element 
+            imgCanvas.innerHTML += bImg;//manipulate
+
+            desCanvas.innerHTML = "";//clean the element 
+            desCanvas.innerHTML += bDes;//manipulate
         }
     }
     xhttp.open("GET", "beer.json", true);
     xhttp.send();
 }
 
+randomBut.onclick = function(){
+    Randomizer()
+    console.log("working!!")
+};
+randomBut.onmouseup =rdmLoad.restart;
+
 gtrdm.onclick = function(){
     OptionPage.style.display = "none";
     RandomPage.style.display = "block";
+    openMenu.style.display = "block";
     Randomizer()
     console.log("working!!")
 };
@@ -123,4 +133,65 @@ gtdg.onclick = function(){
     console.log("working!!")
 };
 gtdg.onmouseup = chooseLoad.play;
+//----------------------------------------
+
+// Checkbox filter fucntion
+
+//checkbox label
+const filterLight = document.getElementById("filterLight");
+const filterStrong = document.getElementById("filterStrong");
+const filterLowc = document.getElementById("filterLowc");
+
+//checkbox
+const lightCb = document.getElementById("lightCb");
+const strongCb = document.getElementById("strongCb");
+const lowcCb = document.getElementById("lowcCb")
+
+//click on the label and check the custom checkbox
+filterLight.onclick = function(){ 
+    if(lightCb.checked){
+        lightCb.checked = false;
+    }
+    else{
+    lightCb.checked = true;
+    strongCb.checked = false;
+    lowcCb.checked = false;
+    }
+}
+
+filterStrong.onclick = function(){   
+    if(strongCb.checked){
+        strongCb.checked = false;
+    }
+    else{
+    lightCb.checked = false;
+    strongCb.checked = true;
+    lowcCb.checked = false;
+    }
+}
+
+filterLowc.onclick = function(){
+    if(lowcCb.checked){
+        lowcCb.checked = false;
+    }
+    else{
+    lightCb.checked = false;
+    strongCb.checked = false;
+    lowcCb.checked = true;
+    }
+}
+//----------------------------------------
+
+//Hamburger menu function
+const overlay = document.getElementById("overlay");
+const closeMenu = document.getElementById("close-menu");
+
+
+openMenu.onclick = function(){
+    overlay.classList.add("show-menu");
+}
+
+closeMenu.onclick = function(){
+    overlay.classList.remove("show-menu");
+}
 //----------------------------------------

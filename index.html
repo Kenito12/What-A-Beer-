@@ -18,6 +18,37 @@
     <div class="mainPage" id="homePage">
 
         <div class="op" id="opening">
+
+            <nav id="overlay">
+                <img src="IMG/Nav/ExitButton.svg" alt="close-btn" id="close-menu">
+                <ul>
+                    <li class="listTitle">Filter</li>
+                    <li>
+                        <label for="filter" class="filterLabel" id="filterLight">Light
+                            <input type="checkbox" value="light" id="lightCb">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="filter" class="filterLabel" id="filterStrong" >Strong
+                            <input type="checkbox" value="strong" id="strongCb">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="filter" class="filterLabel" id="filterLowc">Low-carb
+                            <input type="checkbox" value="low-card" id="lowcCb">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li><button id="wheel-btn">Drinking Game</button></li>
+                </ul>
+            </nav>
+
+            <header>
+                <img src="IMG/Nav/Hamburger Menu.svg" class="menu-btn" id="open-menu" alt="HBGMenu">
+            </header>
+
             <!-- Main Page -->
             <div id="mainPage">
                 <h1 class="title">What A Beer!</h1>
@@ -57,13 +88,25 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 238.31" fill="#F7F8F8" >
                     <path class="morph" d="M0,236.8l53.333.64c53.333.853,160,2.133,266.667-9.813,106.667-12.16,213.333-37.76,320-56.533,106.667-18.987,213.333-30.933,320-26.453,106.667,4.693,213.333,26.027,320,47.36s213.333,42.667,320,45.867,213.333-11.733,266.667-19.2L1920,211.2V0H0Z"/>
                 </svg>
-                <div class="randomrap" id="ranCanvas">
+                <div class="randomrap">
+                    <div class="beerImg" id="imgCanvas">
+                        <!-- <img src="IMG/Beer/BlancheDeChambly.png" alt="${randomed.title}" class="bimg"> -->
+                    </div>
+                    <div class="beerDes">
+                        <div id="desCanvas">
+                            <!-- <h1 class="beerTitle">${randomed.title}</h1>
+                            <h3 class="desCont"><span class="desHead">Brand:</span> ${randomed.brand}</h3>
+                            <h3 class="desCont"><span class="desHead">Type:</span> ${randomed.type}</h3>
+                            <h3 class="desCont"><span class="desHead">Alcohol:</span> ${randomed.alc}%</h3>
+                            <h3 class="desCont"><span class="desHead">Flavor:</span> ${randomed.flv}</h3> -->
+                        </div>
+                        <button class="nextBut" id="randomBut">Next</button>
                 </div>
             </div>
 
             <!-- Drinking Game -->
             <div id="WheelPage">
-                <button class="nextBut" id="randomBut">Next</button>
+                </div>
             </div>
 
 

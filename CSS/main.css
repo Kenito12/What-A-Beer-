@@ -225,6 +225,182 @@ font-family: 'Quicksand', sans-serif;
     background-color: var(--lightYellow);
     transform: translateY(-10px)
 }
-
-
 /* END Randomizer Page */
+
+/* Hamburger Menu */
+.menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav{
+    position: absolute;
+    background-color: var(--lightYellow);
+    top:0;
+    right: 0;
+    display:none;
+    height: 100%;
+    width: 35%;
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.show-menu{
+    display: block;
+    animation: slide-menu 0.3s ease-in-out forwards;
+}
+
+.show-menu > #close-menu{
+    animation: show-x 0.3s 0.4s  ease-in-out forwards;
+}
+
+.show-menu > ul > li{
+    animation: show-filter 0.3s 0.4s ease-in-out forwards;
+}
+
+@keyframes show-x{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slide-menu{
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show-filter{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#close-menu{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+
+#close-menu:hover{
+    transform: rotate(180deg);
+}
+nav>ul{
+    padding: 20% 30% 0 0;
+    float: right;
+    text-align: right;
+}
+nav>ul>li{
+    padding: 5px 0 5px 0;
+    opacity: 0;
+    
+}
+.listTitle{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--darkBrown);
+    
+}
+.filterLabel{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--darkBrown);
+    
+
+    display: block;
+    position: relative;
+    padding-right: 40px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.filterLabel:hover{
+    transform: translateX(10px);
+}
+.filterLabel>input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;    
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background-color:var(--white);
+    transition: all 0.3s ease;
+  }
+
+.filterLabel:hover input ~ .checkmark{
+    background-color: lightgray;
+}
+
+.filterLabel input:checked ~ .checkmark{
+    background-color: var(--darkBrown);
+}
+
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.filterLabel input:checked ~ .checkmark:after{
+    display: block;
+}
+
+.filterLabel .checkmark:after{
+    left: 9px;
+    top: 3px;
+    width: 7px;
+    height: 14px;
+    border: solid #F7F8F8;
+    border-width: 0 4px 4px 0;
+    border-radius: 1px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#wheel-btn{
+    width: 276px;
+    height: 62px;
+    border-radius: 50px;
+    background-color: var(--white);
+    color: var(--darkBrown);
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#wheel-btn:hover{
+    background-color: var(--darkYellow);
+    transform: translateY(10px)
+}
+/* END Hamburger Menu */
