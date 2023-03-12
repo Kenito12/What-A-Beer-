@@ -77,7 +77,6 @@ setTimeout('homePage.style.zIndex = "1";', 2000);
 letgoBut.onclick = function(){
     mainPage.style.display = "none";
     OptionPage.style.display = "block";
-    console.log("working!!")
 };
 letgoBut.onmouseup = chooseLoad.play;
 //----------------------------------------
@@ -107,9 +106,6 @@ function Randomizer(){
             var strongBeer = myObj.filter(StrongAlcCheck);
             var lowCarbBeer = myObj.filter(LowCarbCheck);
             var randomed;
-            console.log(lightBeer);
-            console.log(strongBeer);
-            console.log(lowCarbBeer);
 
             switch(filter){
                 default:
@@ -155,7 +151,6 @@ function Randomizer(){
 
 randomBut.onclick = function(){
     Randomizer()
-    console.log("working!!")
 };
 randomBut.onmouseup =rdmLoad.restart;
 
@@ -164,7 +159,6 @@ gtrdm.onclick = function(){
     RandomPage.style.display = "block";
     openMenu.style.display = "block";
     Randomizer()
-    console.log("working!!")
 };
 gtrdm.onmouseup =rdmLoad.play;
 
@@ -175,7 +169,6 @@ gtrdm.onmouseup =rdmLoad.play;
 gtdg.onclick = function(){
     OptionPage.style.display = "none";
     WheelPage.style.display = "block";
-    console.log("working!!")
 };
 gtdg.onmouseup = wheelLoad.play;
 //----------------------------------------
