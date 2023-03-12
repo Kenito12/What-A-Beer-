@@ -165,3 +165,66 @@ font-family: 'Quicksand', sans-serif;
 }
 
 /* END Features page */
+
+/* Randomizer Page */
+.morph{
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.randomrap{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+}
+.bimg{
+    position: absolute;
+    top:-210px;
+    left: 350px;
+}
+.beerDes{
+    text-align: left;
+    transform: translateY(-100px);
+}
+.beerTitle{
+    font-size: 3.5rem;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: 700;
+    color: var(--darkBrown);
+}
+.desCont{
+    font-family: 'Mandali', sans-serif;
+    font-weight: 400;
+    font-size:1.8rem;
+}
+
+.desHead{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+.nextBut{
+    margin-top: 40px;
+    width: 211px;
+    height: 69px;
+    border-radius: 50px;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--darkBrown);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nextBut:hover{
+    background-color: var(--lightYellow);
+    transform: translateY(-10px)
+}
+
+
+/* END Randomizer Page */

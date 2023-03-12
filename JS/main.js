@@ -12,16 +12,16 @@ const gtdg = document.getElementById("gtdg");
 
 
 //Set display default for page 
-mainPage.style.display = "none";
+// mainPage.style.display = "none";
 OptionPage.style.display = "none";
-RandomPage.style.display = "block";
+RandomPage.style.display = "none";
 WheelPage.style.display = "none";
 
 
 // Using JQUERY to handle page load with a delay because page is not heavy enough.
 $(window).on("load",function(){
-    // $(".loader-wrapper").delay(1200).fadeToggle(300);
-    $(".loader-wrapper").hide();
+    $(".loader-wrapper").delay(1200).fadeToggle(300);
+    // $(".loader-wrapper").hide();
 });
 //----------------------------------------
 
@@ -39,17 +39,26 @@ const animItem = bodymovin.loadAnimation({
 
 //Animejs animation Mainpage
 var mainpageLoad = anime({
-    targets: '.op', 
+    targets: '#mainPage', 
     delay: 1300,
     translateY : 300,
-    autoplay: false
+    // autoplay: false
   });
 
 var chooseLoad = anime({
-    targets: '.op', 
+    targets: '#OptionPage', 
     translateY : 120,
     autoplay: false
   });
+
+var rdmLoad = anime({
+    targets: '.randomrap', 
+    translateY : 100,
+    autoplay: false
+})
+
+
+
 
 // Set Delay on homepage element to change the index after 2 sec
 setTimeout('homePage.style.zIndex = "1";', 2000);
@@ -66,12 +75,45 @@ letgoBut.onmouseup = chooseLoad.play;
 //----------------------------------------
 
 //onclick event to go to Randomizer after button release play new animation
+
+function Randomizer(){
+    var xhttp = new XMLHttpRequest();//using AJAX to send a request to retrieve data from moves.json
+    xhttp.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200){  //check the state of moves.json
+            var myObj = JSON.parse(this.responseText);//convert moves.json data into myObj Arrays
+            var randomed = myObj[Math.floor(Math.random()*myObj.length)]; //radom one array out of Myobj
+            
+
+            var move = `<div class="beerImg">
+                            <img src="${randomed.img}" alt="${randomed.title}" class="bimg">
+                        </div>
+                        <div class="beerDes">
+                            <h1 class="beerTitle">${randomed.title}</h1>
+                            <h3 class="desCont"><span class="desHead">Brand:</span> ${randomed.brand}</h3>
+                            <h3 class="desCont"><span class="desHead">Type:</span> ${randomed.type}</h3>
+                            <h3 class="desCont"><span class="desHead">Alcohol:</span> ${randomed.alc}%</h3>
+                            <h3 class="desCont"><span class="desHead">Flavor:</span> ${randomed.flv}</h3>
+                            <button class="nextBut" onclick="Randomizer()">Next</button>
+                        </div>`
+            var canvas = document.getElementById("ranCanvas");//prepare to manipulate the dom
+            canvas.innerHTML = "";//clean the element 
+            canvas.innerHTML += move;//manipulate
+            rdmLoad.restart
+        }
+    }
+    xhttp.open("GET", "beer.json", true);
+    xhttp.send();
+}
+
 gtrdm.onclick = function(){
     OptionPage.style.display = "none";
     RandomPage.style.display = "block";
+    Randomizer()
     console.log("working!!")
 };
-gtrdm.onmouseup = chooseLoad.play;
+gtrdm.onmouseup =rdmLoad.play;
+
+
 //----------------------------------------
 
 //onclick event to go to Drinking game after button release play new animation

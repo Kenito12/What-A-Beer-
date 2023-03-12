@@ -1,0 +1,21 @@
+[
+    {
+        "id":"1",
+        "title": "Blanche de Chambly",
+        "brand":"Unibroue",
+        "type":"Witbier",
+        "alc":"5",
+        "flv":"Wheat and subtle spices blanketed in citrus flavors <br> reminiscent of orange and lemon",
+        "img":"IMG/Beer/BlancheDeChambly.png"
+    },
+    {
+        "id":"2",
+        "title": "asdfadsf",
+        "brand":"asdfadsf",
+        "type":"asdfa",
+        "alc":"5",
+        "flv":"asdfasdfitrus flavors <br> reminiscent of orange and lemon",
+        "img":"IMG/Beer/BlancheDeChambly.png"
+    }
+    
+]
