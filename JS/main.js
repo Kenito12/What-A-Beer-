@@ -11,7 +11,8 @@ const gtrdm = document.getElementById("gtrdm");
 const gtdg = document.getElementById("gtdg");
 const randomBut = document.getElementById("randomBut");
 const openMenu = document.getElementById("open-menu");
-
+const wheelWrapper = document.getElementById("wheelWrapper");
+const wheel = document.getElementById("wheel");
 
 //Set display default for page 
 // mainPage.style.display = "none";
@@ -60,7 +61,11 @@ var rdmLoad = anime({
     autoplay: false
 })
 
-
+var wheelLoad = anime({
+    targets: '#WheelPage', 
+    translateY : 10,
+    autoplay: false
+})
 
 
 // Set Delay on homepage element to change the index after 2 sec
@@ -132,7 +137,7 @@ gtdg.onclick = function(){
     WheelPage.style.display = "block";
     console.log("working!!")
 };
-gtdg.onmouseup = chooseLoad.play;
+gtdg.onmouseup = wheelLoad.play;
 //----------------------------------------
 
 // Checkbox filter fucntion
@@ -185,6 +190,7 @@ filterLowc.onclick = function(){
 //Hamburger menu function
 const overlay = document.getElementById("overlay");
 const closeMenu = document.getElementById("close-menu");
+const wheelBtn = document.getElementById("wheel-btn");
 
 
 openMenu.onclick = function(){
@@ -194,4 +200,36 @@ openMenu.onclick = function(){
 closeMenu.onclick = function(){
     overlay.classList.remove("show-menu");
 }
+
+wheelBtn.onclick = function(){
+    RandomPage.style.display = "none";
+    WheelPage.style.display = "block";
+    openMenu.style.display = "none";
+    overlay.classList.remove("show-menu");
+}
+wheelBtn.onmouseup = wheelLoad.play
+//----------------------------------------
+
+// Wheel function
+let angle = 7;
+wheelWrapper.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    let dir = Math.floor((Math.random() * 24) + 1) * 15;
+    angle += dir;
+    angle += 360 * 10;
+
+    wheel.style.transform = 'rotate(' + angle + 'deg)';
+}, false);
+
+const linktordm = document.getElementById("linktordm")
+linktordm.onclick = function(){
+    Randomizer();
+    RandomPage.style.display = "block";
+    WheelPage.style.display = "none";
+    openMenu.style.display = "block";
+    console.log("working")
+}
+linktordm.onmouseup =rdmLoad.play;
+
 //----------------------------------------

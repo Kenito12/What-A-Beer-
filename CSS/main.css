@@ -404,3 +404,46 @@ nav>ul>li{
     transform: translateY(10px)
 }
 /* END Hamburger Menu */
+
+/* Wheel */
+.wheelTitle{
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.wheelWrapper{
+    position: relative;
+    width: 44%;
+    height: auto;
+    margin: 0 auto;
+}
+.pointer{
+    position: absolute;
+    top:40%;
+    right: 0;
+}
+
+.rdmlink{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--darkBrown);
+    padding-top: 70px;
+}
+.link{
+    text-decoration: underline;
+    color: var(--darkBrown);
+    transition: all 0.3s ease;
+}
+.link:hover{
+    color: var(--lightYellow);
+}
+
+#wheel{
+    transition: all 0.9s ease-in-out;
+    width: 710px;
+    height: auto;
+}
+/* END Wheel */

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="726.296" height="726.105" viewBox="0 0 726.296 726.105">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_12" data-name="Rectangle 12" width="726.296" height="726.105" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Wheel" transform="translate(-597 -177)">
+    <g id="Group_7" data-name="Group 7" transform="translate(597 177)">
+      <g id="Group_6" data-name="Group 6" clip-path="url(#clip-path)">
+        <path id="Path_7" data-name="Path 7" d="M352.832,360.316,12.53,249.745C61.383,99.391,194.739,2.5,352.832,2.5Z" transform="translate(10.316 2.059)" fill="#fbb277"/>
+        <path id="Path_8" data-name="Path 8" d="M352.832,360.316,12.53,249.745C61.383,99.391,194.739,2.5,352.832,2.5Z" transform="translate(10.316 2.059)" fill="none" stroke="#473a43" stroke-miterlimit="10" stroke-width="5"/>
+        <path id="Path_9" data-name="Path 9" d="M361.09,248.676,150.771,538.154C22.871,445.23-28.066,288.46,20.787,138.1Z" transform="translate(2.059 113.7)" fill="#ffd287"/>
+        <path id="Path_10" data-name="Path 10" d="M361.09,248.676,150.771,538.154C22.871,445.23-28.066,288.46,20.787,138.1Z" transform="translate(2.059 113.7)" fill="none" stroke="#473a43" stroke-miterlimit="10" stroke-width="5"/>
+        <path id="Path_11" data-name="Path 11" d="M294.139,198.748,504.458,488.226c-127.9,92.926-292.736,92.926-420.637,0Z" transform="translate(69.009 163.627)" fill="#f4c2a3"/>
+        <path id="Path_12" data-name="Path 12" d="M294.139,198.748,504.458,488.226c-127.9,92.926-292.736,92.926-420.637,0Z" transform="translate(69.009 163.627)" fill="none" stroke="#473a43" stroke-miterlimit="10" stroke-width="5"/>
+        <path id="Path_13" data-name="Path 13" d="M199.172,248.676,539.474,138.1C588.328,288.46,537.39,445.23,409.49,538.154Z" transform="translate(163.976 113.7)" fill="#f1e1d9"/>
+        <path id="Path_14" data-name="Path 14" d="M199.172,248.676,539.474,138.1C588.328,288.46,537.39,445.23,409.49,538.154Z" transform="translate(163.976 113.7)" fill="none" stroke="#473a43" stroke-miterlimit="10" stroke-width="5"/>
+        <path id="Path_15" data-name="Path 15" d="M199.172,360.316V2.5c158.094,0,291.449,96.89,340.3,247.244Z" transform="translate(163.976 2.059)" fill="#ffbd35"/>
+        <path id="Path_16" data-name="Path 16" d="M199.172,360.316V2.5c158.094,0,291.449,96.89,340.3,247.244Z" transform="translate(163.976 2.059)" fill="none" stroke="#473a43" stroke-miterlimit="10" stroke-width="5"/>
+        <path id="Path_17" data-name="Path 17" d="M366.526,248.83A116.082,116.082,0,1,1,250.443,132.747,116.084,116.084,0,0,1,366.526,248.83" transform="translate(112.705 111.17)" fill="#ffbd35"/>
+        <path id="Path_18" data-name="Path 18" d="M366.526,248.83A116.082,116.082,0,1,1,250.443,132.747,116.084,116.084,0,0,1,366.526,248.83Z" transform="translate(110.618 109.289)" fill="none" stroke="#473a43" stroke-miterlimit="10" stroke-width="5"/>
+      </g>
+    </g>
+    <text id="Flip_Cup" data-name="Flip Cup" transform="translate(947 686.318) rotate(90)" fill="#473a43" font-size="35" font-family="Quicksand" font-weight="700"><tspan x="0" y="0">Flip Cup</tspan></text>
+    <text id="Power_Hour" data-name="Power Hour" transform="translate(823.955 580.275) rotate(162)" fill="#473a43" font-size="34" font-family="Quicksand" font-weight="700"><tspan x="0" y="0">Power Hour</tspan></text>
+    <text id="SPIN_" data-name="SPIN!" transform="translate(887 556)" fill="#473a43" font-size="62" font-family="'Baloo Da \32 '" font-weight="700"><tspan x="0" y="0">SPIN!</tspan></text>
+    <text id="Beer_Pong" data-name="Beer Pong" transform="matrix(0.966, 0.259, -0.259, 0.966, 1107.481, 605.523)" fill="#473a43" font-size="35" font-family="Quicksand" font-weight="700"><tspan x="0" y="0">Beer Pong</tspan></text>
+    <text id="Beer_Ball" data-name="Beer Ball" transform="translate(1068.297 418.567) rotate(-52)" fill="#473a43" font-size="35" font-family="Quicksand" font-weight="700"><tspan x="0" y="0">Beer Ball</tspan></text>
+    <text id="Kings_Cup" data-name="Kings Cup" transform="translate(877.937 399.359) rotate(-135)" fill="#473a43" font-size="35" font-family="Quicksand" font-weight="700"><tspan x="0" y="0">Kings Cup</tspan></text>
+  </g>
+</svg>
