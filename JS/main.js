@@ -84,12 +84,52 @@ letgoBut.onmouseup = chooseLoad.play;
 
 //onclick event to go to Randomizer after button release play new animation
 
+//indicate setting 
+let filter = ""
+
+//Filter function using filter() to filter array
+function lightAlcCheck(alc){
+    return alc.alc <= 5;
+}
+function StrongAlcCheck(alc){
+    return alc.alc > 5;
+}
+function LowCarbCheck(carb){
+    return carb.lowCarb
+}
+
 function Randomizer(){
     var xhttp = new XMLHttpRequest();//using AJAX to send a request to retrieve data from moves.json
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200){  //check the state of moves.json
             var myObj = JSON.parse(this.responseText);//convert moves.json data into myObj Arrays
-            var randomed = myObj[Math.floor(Math.random()*myObj.length)]; //radom one array out of Myobj
+            var lightBeer = myObj.filter(lightAlcCheck);
+            var strongBeer = myObj.filter(StrongAlcCheck);
+            var lowCarbBeer = myObj.filter(LowCarbCheck);
+            var randomed;
+            console.log(lightBeer);
+            console.log(strongBeer);
+            console.log(lowCarbBeer);
+
+            switch(filter){
+                default:
+                    randomed = myObj[Math.floor(Math.random()*myObj.length)];
+                    console.log("default Dayo!")
+                    break;
+                case "light":
+                    randomed = lightBeer[Math.floor(Math.random()*lightBeer.length)]
+                    console.log("light Dayo!")
+                    break;
+                case "strong":
+                    randomed = strongBeer[Math.floor(Math.random()*strongBeer.length)]
+                    console.log("strong Dayo!")
+                    break;
+                case "low-carb":
+                    randomed = lowCarbBeer[Math.floor(Math.random()*lowCarbBeer.length)]
+                    console.log("low carb Dayo!")
+                    break;
+
+            } //radom one array out of Myobj
             
 
             var bImg = `<img src="${randomed.img}" alt="${randomed.title}" class="bimg">`
@@ -156,33 +196,42 @@ const lowcCb = document.getElementById("lowcCb")
 filterLight.onclick = function(){ 
     if(lightCb.checked){
         lightCb.checked = false;
+        filter = "";
     }
     else{
-    lightCb.checked = true;
-    strongCb.checked = false;
-    lowcCb.checked = false;
+        strongCb.checked = false;
+        lowcCb.checked = false;
+        lightCb.checked = true;
+        filter = lightCb.value;
+        console.log(filter)
     }
 }
 
 filterStrong.onclick = function(){   
     if(strongCb.checked){
         strongCb.checked = false;
+        filter = "";
     }
     else{
-    lightCb.checked = false;
-    strongCb.checked = true;
-    lowcCb.checked = false;
+        lightCb.checked = false;
+        strongCb.checked = true;
+        lowcCb.checked = false;
+        filter = strongCb.value;
+        console.log(filter)
     }
 }
 
 filterLowc.onclick = function(){
     if(lowcCb.checked){
         lowcCb.checked = false;
+        filter = "";
     }
     else{
-    lightCb.checked = false;
-    strongCb.checked = false;
-    lowcCb.checked = true;
+        lightCb.checked = false;
+        strongCb.checked = false;
+        lowcCb.checked = true;
+        filter = lowcCb.value;
+        console.log(filter)
     }
 }
 //----------------------------------------

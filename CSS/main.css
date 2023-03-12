@@ -436,6 +436,7 @@ nav>ul>li{
     text-decoration: underline;
     color: var(--darkBrown);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .link:hover{
     color: var(--lightYellow);

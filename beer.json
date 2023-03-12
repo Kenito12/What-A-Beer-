@@ -6,16 +6,97 @@
         "type":"Witbier",
         "alc":"5",
         "flv":"Wheat and subtle spices blanketed in citrus flavors <br> reminiscent of orange and lemon",
-        "img":"IMG/Beer/BlancheDeChambly.png"
+        "img":"IMG/Beer/BlancheDeChambly.png",
+        "lowCarb": false
     },
     {
         "id":"2",
-        "title": "asdfadsf",
-        "brand":"asdfadsf",
-        "type":"asdfa",
+        "title": "Lazy Mutt Strong Ale",
+        "brand":"Minhas Micro Brewery",
+        "type":"American Strong Ale",
+        "alc":"6",
+        "flv":"Aromas are of a strong pine and citrus hop. <br> The pine and citrus flavors both come through <br> with taste that nearly conceals the malt, but not quite.",
+        "img":"IMG/Beer/LazyMuttStrongAle.png",
+        "lowCarb": false
+    },
+    {
+        "id":"3",
+        "title": "Doc Tegart's ESB",
+        "brand":"Arrowhead Brewing Company",
+        "type":"ESB(Extra Strong Bitter)",
+        "alc":"6.5",
+        "flv":" Floral and tropical notes include passionfruit and pineapple.<br>It won 1st place at the East Kootenay Beer Fest in 2014.",
+        "img":"IMG/Beer/DocTegartsESB.png",
+        "lowCarb": false
+    },
+    {
+        "id":"4",
+        "title": "Fowl Mouth ESB",
+        "brand":"Big Rock Brewery",
+        "type":"ESB(Extra Strong Bitter)",
+        "alc":"5.5",
+        "flv":" Big Rock's Brewmaster’s ESB is a beautiful amber colour, <br> and quite balanced in the perceived hop bitterness/malt sweetness. ",
+        "img":"IMG/Beer/FowlMouthESB.png",
+        "lowCarb": false
+    },
+    {
+        "id":"5",
+        "title": "Lightning in a Bottle",
+        "brand":"New Belgium Brewing Company",
+        "type":"Berliner Weissbier",
+        "alc":"3.5",
+        "flv":"Creators of Lightning in a Bottle Music+Lifestyle Festival, <br> in a deliciously tart Berliner Weiss with massive dry-hopping.",
+        "img":"IMG/Beer/LightningInABottle-removebg-preview.png",
+        "lowCarb": false
+    },
+    {
+        "id":"6",
+        "title": "Cariboo Light Lager",
+        "brand":"Cariboo Brewing",
+        "type":"Light Lager",
+        "alc":"4",
+        "flv":"This Light Lager is a low alcohol replica of Cariboo’s Award Winning Genuine Draft, without compromising <br>that same satisfying finish.",
+        "img":"IMG/Beer/CaribooLightLager-removebg-preview.png",
+        "lowCarb": false
+    },
+    {
+        "id":"7",
+        "title": "Aguila Light",
+        "brand":"SAB Miller",
+        "type":"American Adjunct Lager",
+        "alc":"3.4",
+        "flv":"The lower levels of alcohol and bitterness in this lager make it light and easy to drink.",
+        "img":"IMG/Beer/AguilaLight-removebg-preview.png",
+        "lowCarb": false
+    },
+    {
+        "id":"8",
+        "title": "Corona Premier",
+        "brand":"Anheuser-Busch InBev",
+        "type":"Light Lager",
+        "alc":"4",
+        "flv":"Corona Premier is a 90 calorie, low carb extension of the well known CORONA EXTRA brand of beer. It is a light, <br>crisp and refreshing beer that pairs well with seafood.",
+        "img":"IMG/Beer/CoronaPremier-removebg-preview.png",
+        "lowCarb": true
+    },
+    {
+        "id":"9",
+        "title": "PrimeTime",
+        "brand":"Bridge Brewing Company",
+        "type":"Light Lager",
         "alc":"5",
-        "flv":"asdfasdfitrus flavors <br> reminiscent of orange and lemon",
-        "img":"IMG/Beer/BlancheDeChambly.png"
+        "flv":"PrimeTime doesn’t compromise on ingredients, <br>acquiring its refreshingly fruit flavour from juicy Citra and <br>El Dorado hops",
+        "img":"IMG/Beer/PrimeTime-removebg-preview.png",
+        "lowCarb": true
+    },
+    {
+        "id":"10",
+        "title": "Bright Tangerine Sparkling Ale",
+        "brand":"Devils Backbone Brewing Company",
+        "type":"Fruit / Vegetable Beer",
+        "alc":"4",
+        "flv":"This brew is low calorie, gluten removed, with a dry <br>and bubbly finish. The kicker is we load it up with heaps of natural tangerine flavor, making it a little brighter than your average ale!",
+        "img":"IMG/Beer/BTSA-removebg-preview.png",
+        "lowCarb": true
     }
-    
 ]
