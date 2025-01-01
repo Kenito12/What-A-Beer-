@@ -4,7 +4,7 @@ const mainPage = document.getElementById("mainPage");
 const OptionPage = document.getElementById("OptionPage");
 const RandomPage = document.getElementById("RandomPage");
 const WheelPage = document.getElementById("WheelPage");
-
+const Header = document.getElementById("headerI")
 // Buttons
 const letgoBut = document.getElementById("letgoBut");
 const gtrdm = document.getElementById("gtrdm");
@@ -14,12 +14,14 @@ const openMenu = document.getElementById("open-menu");
 const wheelWrapper = document.getElementById("wheelWrapper");
 const wheel = document.getElementById("wheel");
 
+
 //Set display default for page 
 // mainPage.style.display = "none";
 OptionPage.style.display = "none";
 RandomPage.style.display = "none";
 WheelPage.style.display = "none";
 openMenu.style.display = "none";
+// Header.style.display = "none"
 
 
 // Using JQUERY to handle page load with a delay because page is not heavy enough.
@@ -45,25 +47,25 @@ const animItem = bodymovin.loadAnimation({
 var mainpageLoad = anime({
     targets: '#mainPage', 
     delay: 1300,
-    translateY : 300,
+    translateY : [-200, 0],
     // autoplay: false
   });
 
 var chooseLoad = anime({
     targets: '#OptionPage', 
-    translateY : 120,
+    translateY : [-200, 0],
     autoplay: false
   });
 
 var rdmLoad = anime({
     targets: '.randomrap', 
-    translateY : 100,
+    translateY : [-200, 0],
     autoplay: false
 })
 
 var wheelLoad = anime({
     targets: '#WheelPage', 
-    translateY : 10,
+    translateY : [-200, 0],
     autoplay: false
 })
 
